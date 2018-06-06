@@ -40,12 +40,13 @@
 
 
     <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="320dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/view_pod_login_user"
         app:itemTextColor="@drawable/state_left_menu_item"
-        app:menu="@menu/left_menu_news" />
+        app:menu="@menu/left_menu" />
 
 
 </android.support.v4.widget.DrawerLayout>
