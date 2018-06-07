@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         tools:context="com.padcmyanmar.pro3.onetimejobs.fragments.JobPostsFragment">
 
-        <com.minhtetoo.sexeducation.components.rvset.SmartRecyclerView
+        <com.annonymouss.sexeducation.components.rvset.SmartRecyclerView
             android:id="@+id/rv_job_posts"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
