@@ -27,11 +27,19 @@
 
         </android.support.design.widget.AppBarLayout>
 
-        <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/photo_view"
+
+        <FrameLayout
+            android:id="@+id/fl_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher"/>
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <!--<com.github.chrisbanes.photoview.PhotoView-->
+            <!--android:id="@+id/photo_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@mipmap/ic_launcher"/>-->
 
     </android.support.design.widget.CoordinatorLayout>
 
@@ -42,8 +50,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/view_pod_login_user"
-        app:itemTextColor="@drawable/state_left_menu_item"
-        app:menu="@menu/left_menu" />
+        app:menu="@menu/left_menu"
+        app:itemIconTint="@color/accent"
+        app:itemTextColor="@drawable/drawer_item_color"/>
 
 
 </android.support.v4.widget.DrawerLayout>

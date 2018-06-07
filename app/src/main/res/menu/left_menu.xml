@@ -1,74 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/meny_anatomy"
-        android:checked="true"
-        android:title="anatomy "
-        android:icon="@drawable/ic_uterus"/>
+    <group
+        android:checkableBehavior="single"
+        >
 
-    <item
-        android:id="@+id/menu_physiology"
-        android:title="physiology" />
+        <item
+            android:id="@+id/menu_anatomy"
+            android:title="anatomy "
+            android:icon="@drawable/ic_uterus"
+            />
 
-    <item
-        android:id="@+id/menu_dr_tint_swe"
-        android:title="dr tint swe"
-        android:icon="@drawable/ic_doctor"/>
+        <item
+            android:id="@+id/menu_physiology"
+            android:title="physiology" />
 
-    <item
-        android:id="@+id/menu_contraceptive_methods"
-        android:title="contraceptive methods" />
+        <item
+            android:id="@+id/menu_dr_tint_swe"
+            android:title="dr tint swe"
+            android:icon="@drawable/ic_doctor"/>
 
-    <item
-        android:id="@+id/menu_sex_psychology"
-        android:title="sex psychology" />
+        <item
+            android:id="@+id/menu_contraceptive_methods"
+            android:title="contraceptive methods"
+            android:icon="@drawable/condom"/>
 
-
-    <item
-        android:id="@+id/menu_hiv_knowledge"
-        android:title="HIV konwledge" />
-
-
-    <item
-        android:id="@+id/menu_pregnancy_knowledge"
-        android:title="pregnancy knowledge" />
+        <item
+            android:id="@+id/menu_sex_psychology"
+            android:title="sex psychology"
+            android:icon="@drawable/psychology"/>
 
 
-    <item
-        android:id="@+id/menu_diseases"
-        android:title="diseases"
-        android:icon="@drawable/ic_diseases"/>
+        <item
+            android:id="@+id/menu_hiv_knowledge"
+            android:title="HIV konwledge"
+            android:icon="@drawable/hiv"/>
 
 
-    <item
-        android:id="@+id/menu_hormones"
-        android:title="hormones" />
+        <item
+            android:id="@+id/menu_pregnancy_knowledge"
+            android:title="pregnancy knowledge"
+            android:icon="@drawable/pregnancy"/>
 
 
-    <item
-        android:id="@+id/menu_puberty"
-        android:title="အပ်ိုေဖာ္ျခင္း" />
+        <item
+            android:id="@+id/menu_diseases"
+            android:title="diseases"
+            android:icon="@drawable/ic_diseases"/>
 
 
-    <item
-        android:id="@+id/menu_homo"
-        android:title="LGBT and Homosexually" />
+        <item
+            android:id="@+id/menu_hormones"
+            android:title="hormones"
+            android:icon="@drawable/hormone"/>
 
 
-    <item
-        android:id="@+id/menu_medicine"
-        android:title="medicine" />
+        <item
+            android:id="@+id/menu_puberty"
+            android:title="အပ်ိုေဖာ္ျခင္း"
+            android:icon="@drawable/puberty"/>
+
+
+        <item
+            android:id="@+id/menu_homo"
+            android:title="LGBT and Homosexually"
+            android:icon="@drawable/homo"/>
+
+
+        <item
+            android:id="@+id/menu_medicine"
+            android:title="medicine"
+            android:icon="@drawable/hormone"/>
 
 
 
-    <item
-        android:id="@+id/menu_useful_links"
-        android:title="useful links" />
+        <item
+            android:id="@+id/menu_useful_links"
+            android:title="useful links"
+            android:icon="@drawable/useful_links"
+            />
 
 
-    <item
-        android:id="@+id/menu_crime"
-        android:title="မွုခင္း" />
+        <item
+            android:id="@+id/menu_crime"
+            android:title="မွုခင္း"
+            android:icon="@drawable/crime"/>
+    </group>
 
 
 </menu>
