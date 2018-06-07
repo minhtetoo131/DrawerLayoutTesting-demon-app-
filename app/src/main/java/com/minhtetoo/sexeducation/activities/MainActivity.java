@@ -16,12 +16,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.crashlytics.android.Crashlytics;
 import com.facebook.login.LoginManager;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.minhtetoo.sexeducation.R;
 import com.minhtetoo.sexeducation.events.ErrorEvents;
 
+import io.fabric.sdk.android.Fabric;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
@@ -45,6 +48,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this,this);
 
@@ -66,7 +70,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         btnLogout.setOnClickListener(this);
 
 
-        if (currentLoginUser.getPhotoUrl() != null){
+        if (currentLoginUser != null && currentLoginUser.getPhotoUrl() != null){
 
             ImageView ivUserProfile = headerLayout.findViewById(R.id.iv_login_user_bg);
 
@@ -74,6 +78,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     .load(currentLoginUser.getPhotoUrl())
                     .into(ivUserProfile);
         }
+
+
+        PhotoView photoView = (PhotoView) findViewById(R.id.photo_view);
     }
 
     @Override
