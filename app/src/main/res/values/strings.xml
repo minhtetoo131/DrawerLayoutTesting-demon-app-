@@ -3,4 +3,5 @@
     <string name="msg_generic_no_data">no data to display</string>
     <string name="hello_world">hello world</string>
     <string name="facebook_app_id">255012431727339</string>
+    <string name="check_only_with_dial">open app with only dailing 8888</string>
 </resources>

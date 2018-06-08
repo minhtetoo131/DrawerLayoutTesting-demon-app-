@@ -41,6 +41,15 @@
             android:configChanges=
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
+
+        <activity android:name=".activities.SettingActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBarPrimaryDarkStatus"/>
+        <activity android:name=".activities.AboutActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBarPrimaryDarkStatus">
+
+        </activity>
     </application>
 
 </manifest>

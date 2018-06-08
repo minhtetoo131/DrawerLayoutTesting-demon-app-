@@ -1,5 +1,6 @@
 package com.annonymouss.sexeducation.activities;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -52,6 +53,8 @@ public class LoginActivity extends BaseActivity {
     LoginButton loginButton;
     private FirebaseAuth fbAuth;
 
+    private ProgressDialog mProgressDialog;
+
     public static Intent newIntent(Context context){
         return new Intent(context,LoginActivity.class);
     }
@@ -63,13 +66,13 @@ public class LoginActivity extends BaseActivity {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this, this);
 
+        mProgressDialog = new ProgressDialog(this);
+        mProgressDialog.setMessage("Logging into facebook");
+
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("email", "public_profile");
-
         callbackManager = CallbackManager.Factory.create();
-
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-
             @Override
             public void onSuccess(LoginResult loginResult) {
                 exchangeAccessToken(loginResult.getAccessToken());
@@ -78,11 +81,13 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onCancel() {
                 Snackbar.make(loginButton,"You cancel Authentication!",Snackbar.LENGTH_INDEFINITE).show();
+                mProgressDialog.hide();
             }
 
             @Override
             public void onError(FacebookException exception) {
                 Snackbar.make(loginButton,"Facebook Login error!",Snackbar.LENGTH_INDEFINITE).show();
+                mProgressDialog.hide();
             }
         });
 
@@ -119,8 +124,8 @@ public class LoginActivity extends BaseActivity {
         Snackbar.make(toolbar, internetOffEvent.getErrorMsg(), Snackbar.LENGTH_INDEFINITE).show();
     }
 
-//    @OnClick(R.id.btn_login)
-//    public void onTapLogin(View view){
-//        startActivity(MainActivity.newIntent(getApplicationContext()));
-//    }
+    @OnClick(R.id.login_button)
+    public void onTapLogin(View view){
+        mProgressDialog.show();
+    }
 }

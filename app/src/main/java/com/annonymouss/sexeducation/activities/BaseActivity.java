@@ -20,22 +20,27 @@ import io.fabric.sdk.android.Fabric;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
+
+    NetworkChangeReceiver mInternetReceiver;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
-        registerReceiver(new NetworkChangeReceiver(),new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+        mInternetReceiver = new NetworkChangeReceiver();
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+        registerReceiver(mInternetReceiver,new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
         EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        unregisterReceiver(mInternetReceiver);
         EventBus.getDefault().unregister(this);
     }
 

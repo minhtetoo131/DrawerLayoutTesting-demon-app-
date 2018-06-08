@@ -12,25 +12,17 @@
         tools:context="com.padcmyanmar.pro3.onetimejobs.fragments.JobPostsFragment">
 
         <com.annonymouss.sexeducation.components.rvset.SmartRecyclerView
-            android:id="@+id/rv_job_posts"
+            android:id="@+id/rv_anatomy_posts"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
             android:paddingBottom="8dp" />
 
         <include
-            android:id="@+id/vp_empty_jobs"
+            android:id="@+id/vp_empty_anatomy_post"
             layout="@layout/view_pod_empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
-
-
-
     </FrameLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="This is text view in Anatomy Fragment"/>
 
 </android.support.v4.widget.SwipeRefreshLayout>
