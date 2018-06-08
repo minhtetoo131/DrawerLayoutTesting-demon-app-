@@ -128,4 +128,9 @@ public class LoginActivity extends BaseActivity {
     public void onTapLogin(View view){
         mProgressDialog.show();
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 }

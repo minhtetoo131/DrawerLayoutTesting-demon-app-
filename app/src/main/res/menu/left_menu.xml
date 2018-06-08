@@ -11,13 +11,14 @@
             />
 
         <item
-            android:id="@+id/menu_physiology"
-            android:title="physiology" />
-
-        <item
             android:id="@+id/menu_dr_tint_swe"
             android:title="dr tint swe"
             android:icon="@drawable/ic_doctor"/>
+
+        <item
+            android:id="@+id/thi_lo_yar_may"
+            android:title="ThiLoYarMay"
+            />
 
         <item
             android:id="@+id/menu_contraceptive_methods"
